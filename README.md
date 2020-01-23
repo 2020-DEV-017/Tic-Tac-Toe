@@ -89,4 +89,9 @@
 	Test Cases:
 		○ Game should stop and declare Player2 as winner if top-right to bottom-left diagonal ([0,0] [1,1] [2,2]) has "O".
 		○ Game should stop and declare Player2 as winner if top-left to bottom-right diagonal ([0,2] [1,1] [2,0]) has "O".
+
+- Case 7: Game will be declared as draw,
+ 	- if all nine squares are filled.
+ 	Test Case:
+                ○ Game should stop
 ```
