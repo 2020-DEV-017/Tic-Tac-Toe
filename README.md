@@ -42,4 +42,7 @@
 	Test Case: 
 		Player2 will choose the position ([0,1]) after Player1 and the game should give token "O" for it.
 
+	- Mark the token as "X" if the previous choice is "O"
+	Test Case :
+		Game should identify the third play  is from Player 1 at position ([1,0]) and should give token "X" for it.
 ```
