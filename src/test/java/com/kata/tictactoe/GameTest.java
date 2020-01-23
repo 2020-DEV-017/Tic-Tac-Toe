@@ -28,4 +28,16 @@ public class GameTest {
         game.playAt(secondPosition);
         assertEquals('O', game.getTokenAt(secondPosition));
     }
+
+    @Test
+    public void givenAPositionValueWhenThirdTurnThenGameShouldMarkX() {
+        Position firstPosition = new Position(0,0);
+        Position secondPosition = new Position(0, 1);
+        Position thirdPosition = new Position(1, 0);
+        game.playAt(firstPosition);
+        game.playAt(secondPosition);
+        game.playAt(thirdPosition);
+        assertEquals('X', game.getTokenAt(thirdPosition));
+    }
+
 }
