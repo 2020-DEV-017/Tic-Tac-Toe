@@ -3,10 +3,6 @@ package com.kata.tictactoe;
 public class GameBoard {
     private char[][] gridLayout;
 
-    public String getTokenAt(Position position) {
-        return "X";
-    }
-
     public void createNewLayout() {
         gridLayout = new char[3][3];
     }
