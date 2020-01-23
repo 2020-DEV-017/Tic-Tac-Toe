@@ -10,7 +10,7 @@
 
    https://github.com/stephane-genicot/katas/blob/master/TicTacToe.md
 
-##Use-Cases:
+## Use-Cases:
 
 	- When Game starts, it assigns to first player with "X".
 	- Game will Alternate the players, 
