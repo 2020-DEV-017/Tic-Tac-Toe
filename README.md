@@ -49,4 +49,8 @@
  - Case 3: Game will not allow the user to choose a position outside grid size.
 	Test Case:
 		Player should get invalid position exception if position ([2,3]) is chosen beyond grid dimension
+
+ - Case 4: Game will not allow the player to use an already chosen position.
+        Test Case:
+                Player should get invalid position exception if position ([0,0]) is chosen as position already taken.
 ```
