@@ -71,4 +71,11 @@
 	Test Cases:
 		○ Game should stop and declare Player1 as winner if top-right to bottom-left diagonal ([0,0] [1,1] [2,2]) has "X".
 		○ Game should stop and declare Player1 as winner if top-left to bottom-right diagonal ([0,2] [1,1] [2,0]) has "X".
+
+- Case 6: Game will declare player2 as winner and stop,
+	- if token is "O" in one of the 3 Horizontal rows.
+	Test Cases:
+		○ Game should stop and declare Player2 as winner if 1st row ([0,0] [0,1] [0,2]) has "O".
+		○ Game should stop and declare Player2 as winner if 2nd row ([1,0] [1,1] [1,2]) has "O".
+                ○ Game should stop and declare Player2 as winner if 3rd row ([2,0] [2,1] [2,2]) has "O".
 ```
