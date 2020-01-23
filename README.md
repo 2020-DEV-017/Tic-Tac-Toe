@@ -99,3 +99,16 @@
         Test Case:
                 ○ Print game board in console.
 ```
+## Build and Execute:
+```
+Build: 
+	- mvn clean install
+```
+```
+Execute:
+	- Run the test case using IDE/Command prompt using mvn clean install
+		○ Game result for the win or Draw cases will be printed in the console.
+		○ Result of the test case execution status can be observed.
+	
+Note: Maven and Java (greater than 1.6) should be available in your machine.
+```
