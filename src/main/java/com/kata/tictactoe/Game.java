@@ -10,13 +10,17 @@ public class Game {
         gameBoard.createNewLayout();
     }
 
-    public void playAt(Position position) {
+    public String playAt(Position position) {
         if (isPositionNotAvailable(position)) {
             throw new RuntimeException("Position is Occupied");
         }
         char token = getNextToken();
         lastPlayerToken = token;
         gameBoard.mark(token, position);
+        if (isWinIfFirstHorizontalRowOccupiedWithX()) {
+            return lastPlayerToken + " is the Winner";
+        }
+        return null;
     }
 
     private boolean isPositionNotAvailable(Position position) {
@@ -32,5 +36,17 @@ public class Game {
 
     public char getTokenAt(Position position) {
         return gameBoard.getToken(position);
+    }
+
+    public boolean isWinIfFirstHorizontalRowOccupiedWithX() {
+        char EMPTY_SPACE = '\0';
+        char[][] gridlayout = gameBoard.getLayout();
+        for (int rows = 0; rows < gridlayout[0].length; rows++) {
+            if (gridlayout[rows][0] == gridlayout[rows][1] && gridlayout[rows][1] == gridlayout[rows][2]
+                    && gridlayout[rows][0] != EMPTY_SPACE) {
+                return true;
+            }
+        }
+        return false;
     }
 }

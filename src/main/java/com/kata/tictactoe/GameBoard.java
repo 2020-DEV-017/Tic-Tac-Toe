@@ -16,4 +16,8 @@ public class GameBoard {
     public char getToken(Position position) {
         return gridLayout[position.getRow()][position.getColumn()];
     }
+
+    public char[][] getLayout() {
+        return gridLayout;
+    }
 }
