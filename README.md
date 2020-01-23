@@ -84,4 +84,9 @@
  		○ Game should stop and declare Player2 as winner if 1st columns ([0,0] [1,0] [2,0]) has "O".
  		○ Game should stop and declare Player2 as winner if 2nd columns ([0,1] [1,1] [2,1]) has "O".
  		○ Game should stop and declare Player2 as winner if 3rd columns ([0,2] [1,2] [2,2]) has "O".
+
+	- if token is "O" in one of the 2 diagonal  (top-left to bottom-right and top-right to bottom-left).
+	Test Cases:
+		○ Game should stop and declare Player2 as winner if top-right to bottom-left diagonal ([0,0] [1,1] [2,2]) has "O".
+		○ Game should stop and declare Player2 as winner if top-left to bottom-right diagonal ([0,2] [1,1] [2,0]) has "O".
 ```
