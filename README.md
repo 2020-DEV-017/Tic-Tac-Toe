@@ -61,4 +61,9 @@
 		○ Game should stop and declare Player1 as winner if 2nd row ([1,0] [1,1] [1,2]) has "X".
 		○ Game should stop and declare Player1 as winner if 3rd row ([2,0] [2,1] [2,2]) has "X".
 
+        - if token is "X" in one of the 3 Vertical columns.
+	Test Cases:
+		○ Game should stop and declare Player1 as winner if 1st columns ([0,0] [1,0] [2,0]) has "X".
+		○ Game should stop and declare Player1 as winner if 2nd columns ([0,1] [1,1] [2,1]) has "X".
+		○ Game should stop and declare Player1 as winner if 3rd columns ([0,2] [1,2] [2,2]) has "X".
 ```
