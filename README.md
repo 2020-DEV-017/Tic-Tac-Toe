@@ -45,4 +45,8 @@
 	- Mark the token as "X" if the previous choice is "O"
 	Test Case :
 		Game should identify the third play  is from Player 1 at position ([1,0]) and should give token "X" for it.
+
+ - Case 3: Game will not allow the user to choose a position outside grid size.
+	Test Case:
+		Player should get invalid position exception if position ([2,3]) is chosen beyond grid dimension
 ```
