@@ -11,13 +11,12 @@ public class Game {
     }
 
     public void playAt(Position position) {
-        char token = getNextToken();
-        lastPlayerToken = token;
-        if (isPositionAvailable(position)) {
-            gameBoard.mark(token, position);
-        } else {
+        if (!isPositionAvailable(position)) {
             throw new RuntimeException("Position is Occupied");
         }
+        char token = getNextToken();
+        lastPlayerToken = token;
+        gameBoard.mark(token, position);
     }
 
     private boolean isPositionAvailable(Position position) {
