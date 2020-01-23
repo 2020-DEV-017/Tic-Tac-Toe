@@ -1,10 +1,11 @@
 package com.kata.tictactoe;
 
 public class GameBoard {
+    public static final int GRID_SIZE = 3;
     private char[][] gridLayout;
 
     public void createNewLayout() {
-        gridLayout = new char[3][3];
+        gridLayout = new char[GRID_SIZE][GRID_SIZE];
     }
 
     public void mark(char token, Position position) {
