@@ -20,11 +20,11 @@
 	- Game will not allow the player to use an already chosen position.
 	- Game will declare first player as winner and stop,
 		○ If token is "X" in one of the 3 Horizontal rows.
-		○ If token is "X" in one of the 3 Vertical Columns.
+		○ If token is "X" in one of the 3 Vertical columns.
 		○ If token is "X" in one of the 2 diagonals (top-left to bottom-right and top-right to bottom-left).
 	- Game will declare second player as winner and stop,
 		○ If token is "O" in one of the 3 Horizontal rows.
-		○ If token is "O" in one of the 3 Vertical Columns.
+		○ If token is "O" in one of the 3 Vertical columns.
 		○ If token is "O" in one of the 2 diagonals  (top-left to bottom-right and top-right to bottom-left).
 	- Game will be  declared as draw,
 		○ If all nine squares are filled with no winning combination.
@@ -36,4 +36,10 @@
  - Case 1: When Game starts, it assigns to first player with "X".
 	Test Case:
 		 Player1 will choose the position ([0,0]) and the game should give token "X" for it.
+
+ - Case 2: Game will Alternate players.
+	-  Mark the token as "O" if the previous choice is "X"
+	Test Case: 
+		Player2 will choose the position ([0,1]) after Player1 and the game should give token "O" for it.
+
 ```
