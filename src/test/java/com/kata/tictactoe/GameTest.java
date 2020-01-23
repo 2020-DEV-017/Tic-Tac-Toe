@@ -41,8 +41,8 @@ public class GameTest {
     }
 
     @Test(expected = RuntimeException.class)
-    public void givenInValidPositionValueWhenOutsideGirdSizeThenGameReturnException() {
-        new Position(2,3);
+    public void givenInValidPositionValueWhenOutsideGridSizeThenGameReturnException() {
+        new Position(2, 3);
     }
 
 }
