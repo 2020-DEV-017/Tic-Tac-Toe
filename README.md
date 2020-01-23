@@ -94,4 +94,8 @@
  	- if all nine squares are filled.
  	Test Case:
                 ○ Game should stop
+
+- Case 8: Display game result to Players (optional)
+        Test Case:
+                ○ Print game board in console.
 ```
