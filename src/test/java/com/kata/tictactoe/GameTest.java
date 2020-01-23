@@ -1,6 +1,7 @@
 package com.kata.tictactoe;
-import org.junit.Assert;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class GameTest {
     @Test
@@ -9,6 +10,6 @@ public class GameTest {
         Position position = new Position();
         Game game = new Game();
         game.playAt(position);
-        Assert.assertEquals("X",gameboard.getTokenAt(position));
+        assertEquals("X",gameboard.getTokenAt(position));
     }
 }
