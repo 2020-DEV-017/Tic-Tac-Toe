@@ -11,7 +11,7 @@ public class Game {
     }
 
     public void playAt(Position position) {
-        if (!isPositionAvailable(position)) {
+        if (isPositionNotAvailable(position)) {
             throw new RuntimeException("Position is Occupied");
         }
         char token = getNextToken();
@@ -19,8 +19,8 @@ public class Game {
         gameBoard.mark(token, position);
     }
 
-    private boolean isPositionAvailable(Position position) {
-        return getTokenAt(position) != TOKEN_X && getTokenAt(position) != TOKEN_O;
+    private boolean isPositionNotAvailable(Position position) {
+        return !(getTokenAt(position) != TOKEN_X && getTokenAt(position) != TOKEN_O);
     }
 
     private char getNextToken() {
