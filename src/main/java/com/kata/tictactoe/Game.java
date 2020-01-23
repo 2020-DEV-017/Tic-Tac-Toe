@@ -17,7 +17,7 @@ public class Game {
         char token = getNextToken();
         lastPlayerToken = token;
         gameBoard.mark(token, position);
-        if (isWinIfFirstHorizontalRowOccupiedWithX()) {
+        if (isWinIfHorizontalRowOccupiedWithX()) {
             return lastPlayerToken + " is the Winner";
         }
         return null;
@@ -38,7 +38,7 @@ public class Game {
         return gameBoard.getToken(position);
     }
 
-    public boolean isWinIfFirstHorizontalRowOccupiedWithX() {
+    public boolean isWinIfHorizontalRowOccupiedWithX() {
         char EMPTY_SPACE = '\0';
         char[][] gridlayout = gameBoard.getLayout();
         for (int rows = 0; rows < gridlayout[0].length; rows++) {
