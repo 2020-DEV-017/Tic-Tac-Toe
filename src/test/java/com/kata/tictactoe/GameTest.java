@@ -216,4 +216,20 @@ public class GameTest {
         game.playAt(fifthPosition);
         assertEquals("O is the Winner", game.playAt(sixthPosition));
     }
+
+    @Test
+    public void givenFirstVerticalColumnWhenOccupiedWithOTokenThenGameShouldDeclareAsWinner() {
+        Position firstPosition = new Position(0, 2);
+        Position secondPosition = new Position(0, 0);
+        Position thirdPosition = new Position(0, 1);
+        Position fourthPosition = new Position(1, 0);
+        Position fifthPosition = new Position(1, 1);
+        Position sixthPosition = new Position(2, 0);
+        game.playAt(firstPosition);
+        game.playAt(secondPosition);
+        game.playAt(thirdPosition);
+        game.playAt(fourthPosition);
+        game.playAt(fifthPosition);
+        assertEquals("O is the Winner", game.playAt(sixthPosition));
+    }
 }
