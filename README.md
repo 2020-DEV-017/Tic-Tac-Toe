@@ -53,4 +53,12 @@
  - Case 4: Game will not allow the player to use an already chosen position.
         Test Case:
                 Player should get invalid position exception if position ([0,0]) is chosen as position already taken.
+
+ - Case 5: Game will declare player1 as winner and stop,
+	- If token is "X" in one of the 3 Horizontal rows.
+	Test Cases:
+		○ Game should stop and declare Player1 as winner if 1st row ([0,0] [0,1] [0,2]) has "X".
+		○ Game should stop and declare Player1 as winner if 2nd row ([1,0] [1,1] [1,2]) has "X".
+		○ Game should stop and declare Player1 as winner if 3rd row ([2,0] [2,1] [2,2]) has "X".
+
 ```
