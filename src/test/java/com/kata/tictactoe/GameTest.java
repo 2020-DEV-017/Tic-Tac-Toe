@@ -12,4 +12,14 @@ public class GameTest {
         game.playAt(position);
         assertEquals("X",gameboard.getTokenAt(position));
     }
+    @Test
+    public void givenAPositionValueWhenSecondTurnThenGameShouldMarkO(){
+        Position firstPosition = new Position(0,0);
+        Position secondPosition = new Position(0,1);
+        Game game = new Game();
+        game.playAt(firstPosition);
+        game.playAt(secondPosition);
+        assertEquals('O',game.getTokenAt(secondPosition));
+    }
+
 }
