@@ -45,4 +45,16 @@ public class GameTest {
         new Position(2, 3);
     }
 
+    @Test(expected = RuntimeException.class)
+    public void givenPositionValueWhenOccupiedThenGameShouldThrowException() {
+        Position firstPosition = new Position(0, 0);
+        Position secondPosition = new Position(0, 1);
+        Position thirdPosition = new Position(1, 0);
+        Position OccupiedPosition = new Position(0, 0);
+        game.playAt(firstPosition);
+        game.playAt(secondPosition);
+        game.playAt(thirdPosition);
+        game.playAt(OccupiedPosition);
+    }
+
 }
