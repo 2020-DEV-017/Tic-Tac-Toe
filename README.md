@@ -30,3 +30,10 @@
 		○ If all nine squares are filled with no winning combination.
 	- Display game result to Players (optional)
 		○ Print game board in console.
+
+## Unit Test Cases Covered:
+```
+ - Case 1: When Game starts, it assigns to first player with "X".
+	Test Case:
+		 Player1 will choose the position ([0,0]) and the game should give token "X" for it.
+```
