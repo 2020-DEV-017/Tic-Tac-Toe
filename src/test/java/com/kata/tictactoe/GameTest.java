@@ -186,7 +186,7 @@ public class GameTest {
     }
 
     @Test
-    public void givenSecondVerticalColumnWhenOccupiedWithOTokenThenGameShouldDeclareAsWinner() {
+    public void givenSecondHorizontalRowWhenOccupiedWithOTokenThenGameShouldDeclareAsWinner() {
         Position firstPosition = new Position(0, 2);
         Position secondPosition = new Position(0, 1);
         Position thirdPosition = new Position(0, 0);

@@ -18,8 +18,8 @@ public class Game {
         char token = getNextToken();
         lastPlayerToken = token;
         gameBoard.mark(token, position);
-        if (isWinIfHorizontalRowOccupiedWithX() || isWinIfVerticalColumnOccupiedWithX() ||
-                isWinIfTopLeftToBottomRightDiagonalOccupiedWithX() || isWinIfTopRightToBottomLeftDiagonalOccupiedWithX()) {
+        if (isWinIfHorizontalRowOccupiedWithSameToken() || isWinIfVerticalColumnOccupiedWithSameToken() ||
+                isWinIfTopLeftToBottomRightDiagonalOccupiedWithSameToken() || isWinIfTopRightToBottomLeftDiagonalOccupiedWithSameToken()) {
             return lastPlayerToken + " is the Winner";
         }
         return null;
@@ -40,7 +40,7 @@ public class Game {
         return gameBoard.getToken(position);
     }
 
-    public boolean isWinIfHorizontalRowOccupiedWithX() {
+    public boolean isWinIfHorizontalRowOccupiedWithSameToken() {
         char[][] gridlayout = gameBoard.getLayout();
         for (int rows = 0; rows < gridlayout[0].length; rows++) {
             if (gridlayout[rows][0] == gridlayout[rows][1] && gridlayout[rows][1] == gridlayout[rows][2]
@@ -51,7 +51,7 @@ public class Game {
         return false;
     }
 
-    public boolean isWinIfVerticalColumnOccupiedWithX() {
+    public boolean isWinIfVerticalColumnOccupiedWithSameToken() {
         char[][] gridlayout = gameBoard.getLayout();
         for (int columns = 0; columns < gridlayout[0].length; columns++) {
             if (gridlayout[0][columns] == gridlayout[1][columns] && gridlayout[1][columns] == gridlayout[2][columns]
@@ -62,7 +62,7 @@ public class Game {
         return false;
     }
 
-    public boolean isWinIfTopLeftToBottomRightDiagonalOccupiedWithX() {
+    public boolean isWinIfTopLeftToBottomRightDiagonalOccupiedWithSameToken() {
         char[][] gridlayout = gameBoard.getLayout();
         if (gridlayout[0][0] == gridlayout[1][1] && gridlayout[1][1] == gridlayout[2][2]
                 && gridlayout[0][0] != EMPTY_SPACE) {
@@ -71,7 +71,7 @@ public class Game {
         return false;
     }
 
-    public boolean isWinIfTopRightToBottomLeftDiagonalOccupiedWithX() {
+    public boolean isWinIfTopRightToBottomLeftDiagonalOccupiedWithSameToken() {
         char[][] gridlayout = gameBoard.getLayout();
         if (gridlayout[0][2] == gridlayout[1][1] && gridlayout[1][1] == gridlayout[2][0]
                 && gridlayout[0][2] != EMPTY_SPACE) {
