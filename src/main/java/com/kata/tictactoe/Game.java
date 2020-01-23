@@ -3,6 +3,7 @@ package com.kata.tictactoe;
 public class Game {
     private static final char TOKEN_X = 'X';
     private static final char TOKEN_O = 'O';
+    private static final int SIZE = 3;
     private static final char EMPTY_SPACE = '\0';
     private char lastPlayerToken;
     GameBoard gameBoard = new GameBoard();
@@ -21,6 +22,9 @@ public class Game {
         if (isWinIfHorizontalRowOccupiedWithSameToken() || isWinIfVerticalColumnOccupiedWithSameToken() ||
                 isWinIfTopLeftToBottomRightDiagonalOccupiedWithSameToken() || isWinIfTopRightToBottomLeftDiagonalOccupiedWithSameToken()) {
             return lastPlayerToken + " is the Winner";
+        }
+        if (isDraw()) {
+            return "Game is draw";
         }
         return null;
     }
@@ -78,5 +82,17 @@ public class Game {
             return true;
         }
         return false;
+    }
+
+    public boolean isDraw() {
+        char[][] gridlayout = gameBoard.getLayout();
+        for (int row = 0; row < SIZE; row++) {
+            for (int column = 0; column < SIZE; column++) {
+                if (gridlayout[row][column] == EMPTY_SPACE) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }
