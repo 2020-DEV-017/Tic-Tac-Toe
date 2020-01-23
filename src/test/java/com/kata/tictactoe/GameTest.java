@@ -86,7 +86,7 @@ public class GameTest {
     }
 
     @Test
-    public void givenThirdHorizontalRowWhenOccupiedWithXTokenThenGameShouldDeclareAsWinner(){
+    public void givenThirdHorizontalRowWhenOccupiedWithXTokenThenGameShouldDeclareAsWinner() {
         Position firstPosition = new Position(2, 0);
         Position secondPosition = new Position(0, 0);
         Position thirdPosition = new Position(2, 1);
@@ -96,6 +96,20 @@ public class GameTest {
         game.playAt(secondPosition);
         game.playAt(thirdPosition);
         game.playAt(fourthPosition);
-        assertEquals("X is the Winner",game.playAt(fifthPosition));
+        assertEquals("X is the Winner", game.playAt(fifthPosition));
+    }
+
+    @Test
+    public void givenFirstVerticalColumnWhenOccupiedWithXTokenThenGameShouldDeclareAsWinner() {
+        Position firstPosition = new Position(0, 0);
+        Position secondPosition = new Position(0, 2);
+        Position thirdPosition = new Position(1, 0);
+        Position fourthPosition = new Position(1, 1);
+        Position fifthPosition = new Position(2, 0);
+        game.playAt(firstPosition);
+        game.playAt(secondPosition);
+        game.playAt(thirdPosition);
+        game.playAt(fourthPosition);
+        assertEquals("X is the Winner", game.playAt(fifthPosition));
     }
 }
