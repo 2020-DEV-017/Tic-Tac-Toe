@@ -112,3 +112,8 @@ Execute:
 	
 Note: Maven and Java (greater than 1.6) should be available in your machine.
 ```
+## Acknowledgement:
+
+* [FizzBuzz](https://youtu.be/T38L7A0xP-c) - FizzBuzz example using TDD
+* [Test Driven Development](https://www.youtube.com/watch?v=uGaNkTahrIw) - TTD in Agile practice
+* [README](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - Reference for writing and formatting syntax in README file
