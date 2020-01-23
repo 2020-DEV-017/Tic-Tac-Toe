@@ -18,7 +18,8 @@ public class Game {
         char token = getNextToken();
         lastPlayerToken = token;
         gameBoard.mark(token, position);
-        if (isWinIfHorizontalRowOccupiedWithX() || isWinIfVerticalColumnOccupiedWithX()) {
+        if (isWinIfHorizontalRowOccupiedWithX() || isWinIfVerticalColumnOccupiedWithX() ||
+                isWinIfTopLeftToBottomRightDiagonalOccupiedWithX()) {
             return lastPlayerToken + " is the Winner";
         }
         return null;
@@ -57,6 +58,15 @@ public class Game {
                     && gridlayout[0][columns] != EMPTY_SPACE) {
                 return true;
             }
+        }
+        return false;
+    }
+
+    public boolean isWinIfTopLeftToBottomRightDiagonalOccupiedWithX() {
+        char[][] gridlayout = gameBoard.getLayout();
+        if (gridlayout[0][0] == gridlayout[1][1] && gridlayout[1][1] == gridlayout[2][2]
+                && gridlayout[0][0] != EMPTY_SPACE) {
+            return true;
         }
         return false;
     }
